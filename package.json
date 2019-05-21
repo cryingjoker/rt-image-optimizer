@@ -1,0 +1,18 @@
+{
+  "name": "rt-image-optimizer",
+  "version": "1.0.0",
+  "description": "image optimizer for vue_rt_style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Nikolaev / cryingjoker",
+  "license": "ISC",
+  "dependencies": {
+    "image-size": "^0.7.4",
+    "imagemin": "^6.1.0",
+    "imagemin-pngquant": "^7.0.0",
+    "sharp": "^0.22.1",
+    "yargs": "^13.2.4"
+  }
+}
