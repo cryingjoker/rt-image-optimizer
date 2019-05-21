@@ -6,10 +6,11 @@ const path = require('path');
 const tmpFolder = argv['orig'];
 const distFolder = argv['dist'];
 const supportFormats = ['\\.jpg','\\.jpeg','\\.png'];
+const dirname = __dirname.split('/node_modules')[0];
 const supportFormatsRegexp = new RegExp(`(${supportFormats.join('$)|(')}$)`,'i');
 const sizeOf = require('image-size');
-const tmpFolderPath = path.join(__dirname, tmpFolder);
-const distFolderPath = path.join(__dirname, distFolder);
+const tmpFolderPath = path.join(dirname, tmpFolder);
+const distFolderPath = path.join(dirname, distFolder);
 const sharp = require('sharp');
 const maxWidth = argv['max-width'];
 
