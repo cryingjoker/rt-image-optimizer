@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const tmpFolder = argv['orig'];
 const distFolder = argv['dist'];
+const safeTmpFile = argv['safe-tmp-file'] ? argv['safe-tmp-file'] === 'true' : false;
 const supportFormats = ['\\.jpg','\\.jpeg','\\.png'];
 const dirname = __dirname.split('/node_modules')[0];
 const supportFormatsRegexp = new RegExp(`(${supportFormats.join('$)|(')}$)`,'i');
@@ -49,5 +50,9 @@ const  optimizyImage = async (filePath, distDirPath) => {
       imageminPngquant()
     ]
   });
+  if(!safeTmpFile) {
+      fs.unlinkSync(filePath);
+  }
+
   console.log('Images optimized');
 };

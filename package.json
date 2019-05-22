@@ -1,6 +1,6 @@
 {
   "name": "rt-image-optimizer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "image optimizer for vue_rt_style",
   "main": "index.js",
   "scripts": {
